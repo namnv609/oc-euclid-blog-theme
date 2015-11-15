@@ -1,0 +1,29 @@
+[blogPosts]
+postsPerPage = "5"
+sortOrder = "published_at desc"
+==
+{% set posts = blogPosts.posts %}
+{% set noPhotoImage = this.controller.assetPath ~ '/assets/images/no-image-available.png' %}
+
+{% if posts|length > 0 %}
+    <ul class="widget-recent-posts">
+    {% for post in posts %}
+        {% set featuredImage = post.featured_images.0.path|default(noPhotoImage) %}
+        <li>
+            <div class="post-image">
+                <div class="post-mask"></div>
+                <img width="70" height="70" src="{{ featuredImage }}" class="attachment-post-widget"  />
+            </div>
+            <h6>
+                <a href="/post/{{ post.slug }}">
+                    {{ post.title }}
+                </a>
+            </h6>
+            <span>
+                {{ post.published_at|date('F d, Y') }}
+            </span>
+            <div class="clear"></div>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}

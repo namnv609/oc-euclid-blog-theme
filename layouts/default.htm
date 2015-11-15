@@ -1,0 +1,19 @@
+description = "Default layout"
+
+[staticMenu mainMenu]
+code = "mainMenu"
+==
+{% partial '_header' %}
+<!-- Start Main Container -->
+<div class="container zerogrid">
+    <!-- Start Posts Container -->
+    <div class="col-2-3" id="post-container">
+        <div class="wrap-col">
+            {% page %}
+        </div>
+    </div>
+    <!-- End Posts Container -->
+    {% partial '_sidebar' %}
+</div>
+<!-- End Main Container -->
+{% partial '_footer' %}

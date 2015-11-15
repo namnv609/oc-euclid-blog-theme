@@ -1,0 +1,33 @@
+name: 'Euclid Blog Theme'
+description: 'Euclid blog theme for OctoberCMS'
+author: NamNV609
+homepage: 'http://namnv609.cf'
+code: Euclid-Blog-Theme
+form:
+    tabs:
+        fields:
+            # General tab
+            site_name:
+                label: Site name
+                comment: The website name as it should appear on the front-end
+                default: LaradevVN
+                tab: General
+            default_featured_image:
+                label: Default featured image
+                comment: Default image for post without featured image
+                default: /themes/oc-euclid-blog-theme/assets/images/no-featured-image.jpg
+                tab: General
+            theme_color_scheme:
+                label: Theme colors
+                comment: Change theme to your favorite color
+                tab: General
+                default: 'green'
+                type: dropdown
+                options:
+                    green: Green
+                    orange: Orange
+                    purple: Purple
+                    red: Red
+                    yellow: Yellow
+require:
+    - RainLab.Blog

@@ -1,0 +1,95 @@
+name: MainMenu
+items:
+    -
+        title: Home
+        nesting: ''
+        type: url
+        url: /
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isExternal: '0'
+            isHidden: '0'
+            cssClass: ''
+    -
+        title: Packages
+        nesting: ''
+        type: url
+        url: /packages
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isExternal: '0'
+            isHidden: '0'
+            cssClass: ''
+        items:
+            -
+                title: 'PHP Packages'
+                nesting: ''
+                type: url
+                url: /packages/php
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
+                items:
+                    -
+                        title: Laravel
+                        nesting: ''
+                        type: url
+                        url: /packages/php/laravel
+                        code: ''
+                        reference: ''
+                        cmsPage: ''
+                        replace: ''
+                        viewBag:
+                            isExternal: '0'
+                            isHidden: '0'
+                            cssClass: ''
+            -
+                title: Laravel
+                nesting: ''
+                type: url
+                url: /packages/php/laravel
+                code: ''
+                reference: ''
+                cmsPage: ''
+                replace: ''
+                viewBag:
+                    isExternal: '0'
+                    isHidden: '0'
+                    cssClass: ''
+    -
+        title: 'About Us'
+        nesting: ''
+        type: url
+        url: /about-us
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isExternal: '0'
+            isHidden: '0'
+            cssClass: ''
+    -
+        title: Contact
+        nesting: ''
+        type: url
+        url: /contact
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isExternal: '0'
+            isHidden: '0'
+            cssClass: ''

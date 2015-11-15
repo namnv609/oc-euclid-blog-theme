@@ -1,0 +1,18 @@
+{% set lastPage = blogPosts.posts.lastPage %}
+{% set currentPage = blogPosts.posts.currentPage %}
+
+{% if lastPage > 1 %}
+<!-- Start Pagination -->
+<div class="spacing-20"></div>
+<ul class="pagination">
+    {% for i in 1..lastPage %}
+        <li {{ currentPage == i ? 'class="current"' : '' }}>
+            <a href="/categories/{{ category.slug }}/{{ i }}">
+                {{ i }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+<!-- End Pagination -->
+<div class="clear"></div>
+{% endif %}

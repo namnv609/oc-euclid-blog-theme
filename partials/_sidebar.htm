@@ -1,0 +1,33 @@
+[blogCategories]
+==
+{% set posts = blogPosts.posts %}
+
+<!-- Start Sidebar -->
+<div class="col-1-3">
+    <div class="wrap-col">
+        <div class="widget-container">
+            <h6 class="widget-title">Categories</h6>
+        {% if categories|length > 0 %}
+            <ul>
+            {% for category in categories %}
+                <li class="cat-item">
+                    <a href="/categories/{{ category.slug }}">
+                        {{ category.name }}
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+            <div class="clear"></div>
+        </div>
+        <div class="widget-container">
+            <h6 class="widget-title">Latest Posts</h6>
+            <!-- Start Widget -->
+            {% partial '_small_posts' %}
+            <!-- End Widget -->
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- End Sidebar -->

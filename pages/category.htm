@@ -1,0 +1,23 @@
+url = "categories/:slug/:page?"
+layout = "default"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = "15"
+noPostsMessage = "No posts found!"
+sortOrder = "published_at desc"
+categoryPage = "blog/tag"
+postPage = "blog/post"
+==
+function onEnd()
+{
+    if ($this->category) {
+        $this->page->title = $this->category->name;
+    } else {
+        return $this->controller->run('/404');
+    }
+}
+==
+{% partial '_posts' %}
+{% partial '_paginate' %}
